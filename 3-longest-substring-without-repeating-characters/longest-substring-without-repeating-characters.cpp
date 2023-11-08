@@ -3,7 +3,7 @@ public:
     int lengthOfLongestSubstring(string s) {
         int max=0;
         string str="";
-        if(s==" "){
+        if(s.length()==1){
             return 1;
         }
         for(int i=0;i<s.length();i++){
