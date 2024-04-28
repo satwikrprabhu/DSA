@@ -3,8 +3,6 @@ class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {
         int min=strs[0].length();
-        int max=0;
-        string maxstr="";
         string str=strs[0];
         string ans="";
         for(auto i:strs){
@@ -22,11 +20,9 @@ public:
                 else{
                     flag=false;
                     return ans;
-                    break;
                 }
             }
             if(flag==false){
-                ans="";
                 continue;
             }
             else{
