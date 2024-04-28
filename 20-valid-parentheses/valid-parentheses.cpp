@@ -7,13 +7,7 @@ public:
         if(s.empty()){
             s.push(str[i]);
         }
-        else if(s.top()=='(' && str[i]==')'){
-             s.pop();
-        }
-        else if(s.top()=='[' && str[i]==']'){
-             s.pop();
-        }
-        else if(s.top()=='{' && str[i]=='}'){
+        else if((s.top()=='(' && str[i]==')') || (s.top()=='[' && str[i]==']') || (s.top()=='{' && str[i]=='}')){
              s.pop();
         }
         else{
