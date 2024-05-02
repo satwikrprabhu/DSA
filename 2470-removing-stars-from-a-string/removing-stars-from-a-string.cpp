@@ -15,9 +15,7 @@ public:
             str+=stk.top();
             stk.pop();
         }
-        for(int i=str.length()-1;i>=0;i--){
-            rev+=str[i];
-        }
-        return rev;
+        reverse(str.begin(), str.end()); 
+        return str;
     }
 };
