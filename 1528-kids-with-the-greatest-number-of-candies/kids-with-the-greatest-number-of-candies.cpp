@@ -8,8 +8,9 @@ public:
                 max=i;
             }
         }
+        int cand;
         for(auto i:candies){
-            int cand = i + extraCandies;
+             cand = i + extraCandies;
             if(cand>=max){
                 a.push_back(true);
             }
