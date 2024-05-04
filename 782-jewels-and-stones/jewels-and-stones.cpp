@@ -2,7 +2,7 @@ class Solution {
 public:
     int numJewelsInStones(string jewels, string stones) {
       int count=0;
-      unordered_map<char,int> m;
+      char m[256];
       for(int i=0;i<stones.length();i++){
         m[stones[i]]+=1;
       }  
