@@ -6,13 +6,15 @@ public:
         int j=0;
         while(i<n){
             a[j]=nums[i];
-            j+=2;
+            j++;
+            j++;
             i++;
         }
         j=1;
         while(i<2*n){
             a[j]=nums[i];
-            j+=2;
+            j++;
+            j++;
             i++;
         }
         return a;
