@@ -19,10 +19,8 @@ public:
                 }
                 else{
                     str=str+i[j];
-                    cout<<str<<"\t";
                 }
             }
-            cout<<endl;
         }
         return a;
     }
