@@ -1,28 +1,17 @@
 class Solution {
 public:
     int minSteps(string s, string t) {
-        unordered_map<char,int> m1;
-        unordered_map<char,int> m2;
+        int a[26]={0};
+        int i=0;
+        while(i<s.size()){
+            a[t[i]-'a']++;
+            a[s[i]-'a']--;
+            i++;
+        }
         int count=0;
-        for(auto i:s){
-            m1[i]+=1;
+        for(int i=0;i<26;i++){
+            count +=max(0,a[i]);
         }
-        for(auto i:t){
-            m2[i]+=1;
-        }
-        for(auto i:m1){
-            for(auto j:m2){
-                if(i.first==j.first){
-                    if(i.second!=j.second){
-                        int  mini = min(i.second,j.second);
-                        count = count + mini;
-                    }
-                    else{
-                        count=count+i.second;
-                    }
-                }
-            }
-        }
-        return s.length()-count;
+        return count;
     }
 };
