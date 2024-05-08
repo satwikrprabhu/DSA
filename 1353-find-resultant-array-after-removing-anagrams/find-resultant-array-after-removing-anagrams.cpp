@@ -21,7 +21,6 @@ public:
                 max=m2;
             }
             for(auto k:max){
-                cout<<k.first<<m1[k.first]<<'\t'<<m2[k.first]<<endl;
                 if(m1[k.first]==m2[k.first]){
                     continue;
                 }
@@ -35,7 +34,6 @@ public:
             else{
                 a.push_back(words[i]);
             }
-            cout<<endl;
         }
         return a;
     }
