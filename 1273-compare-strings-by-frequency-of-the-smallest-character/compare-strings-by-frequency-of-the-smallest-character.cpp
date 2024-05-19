@@ -4,7 +4,6 @@ public:
         vector<int> wordfreq;
         vector<int> queryfreq;
         vector<int> res;
-
         //word frequency
         for(auto i:words){
         unordered_map<char,int> m;
@@ -19,13 +18,13 @@ public:
 
         // queries frequency
          for(auto i:queries){
-        unordered_map<char,int> m2;
+        unordered_map<char,int> m;
         char ans='z';
             for(auto j:i){
              ans=min(ans,j);
-             m2[j]+=1;
+             m[j]+=1;
             }
-            queryfreq.push_back(m2[ans]);
+            queryfreq.push_back(m[ans]);
         }
         //end of queries frequncy
 
