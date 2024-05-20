@@ -1,19 +1,25 @@
 class Solution {
 public:
+    bool reverse(string str){
+        int i=0,j=str.length()-1;
+        while(i<=j){
+            if(str[i]==str[j]){
+                i++;
+                j--;
+                continue;
+            }
+            else{
+                return false;
+            }
+        }
+        return true;
+    }
     string firstPalindrome(vector<string>& words) {
-        for(auto j:words){
-            if(reverse(j)==j){
-                return j;
+        for(auto k:words){
+            if(reverse(k)==true){
+                return k;
             }
         }
         return "";
-    }
-
-    string reverse(string str){
-        string ans="";
-        for(int i=str.size()-1;i>=0;i--){
-            ans=ans+str[i];
-        }
-        return ans;
     }
 };
