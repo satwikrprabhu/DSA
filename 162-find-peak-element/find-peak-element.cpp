@@ -13,7 +13,6 @@ public:
                 }
             }
             if(j==n){
-                cout<<"flag";
                 if(nums[j]>nums[j-1]){
                     return j;
                 }
