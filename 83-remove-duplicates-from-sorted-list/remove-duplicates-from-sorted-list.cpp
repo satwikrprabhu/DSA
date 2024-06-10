@@ -12,9 +12,7 @@ class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
         ListNode* temp = head;
-        ListNode* prev = head;
         while(temp!=NULL){
-            prev=temp;
             if(temp->next==nullptr){
                 return head;
             }
