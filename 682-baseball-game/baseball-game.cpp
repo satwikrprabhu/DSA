@@ -13,11 +13,7 @@ public:
                 s.push_back(2*s.back());
             }
             else if(i=="+"){
-                int temp = s.back();
-                s.pop_back();
-                int temp2 = s.back();
-                s.push_back(temp);
-                s.push_back(temp+temp2);
+                s.push_back(s[s.size()-1]+s[s.size()-2]);
             }
             else{
                 s.push_back(stoi(i));
