@@ -8,7 +8,6 @@ public:
             stk.push(s[i]);
             if(stk.top()=='('){
                while(!stk.empty()){
-                cout<<i;
                 i++;
                 if(s[i]=='('){
                     stk.push(s[i]);
